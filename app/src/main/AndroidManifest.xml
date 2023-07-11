@@ -34,6 +34,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name='StartupActivity' android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name='org.ruboto.RubotoActivity' />
+        <activity android:name='org.ruboto.RubotoDialog' android:theme='@android:style/Theme.Dialog' />
+        <service
+            android:name='org.ruboto.RubotoService'
+            android:exported='false' />
+        <activity
+            android:name='org.ruboto.SplashActivity'
+            android:configChanges='orientation|screenSize'
+            android:exported='false'
+            android:noHistory='true' />
     </application>
 
 </manifest>
